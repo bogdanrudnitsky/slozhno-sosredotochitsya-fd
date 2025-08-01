@@ -1,3 +1,4 @@
+/* 1. Явная светлая тема — по классу */
 :root.theme-light {
   --accent-color: #ff8dcb;
   --main-text-color: #353430;
@@ -14,15 +15,31 @@
   --rec-color: transparent;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    --accent-color: #ff8dcb;
-    --main-text-color: #353430;
-    /* и остальные переменные как выше */
-  }
+:root.theme-light .header__rec,
+:root.theme-light .header__rec::after {
+  display: none;
 }
 
-:root[class="theme-light"] .header__rec,
-:root[class="theme-light"] .header__rec::after {
-  display: none !important;
+/* 2. Авто-светлая тема, если system light и активна auto-тема */
+@media (prefers-color-scheme: light) {
+  :root.theme-auto {
+    --accent-color: #ff8dcb;
+    --main-text-color: #353430;
+    --title-color: #ffc2e6;
+    --title-shadow: #FF8DCB;
+    --button-color: #353430;
+    --hover-color: rgba(50, 49, 45, 0.4);
+    --background-color: #FFF1F7;
+    --background-image: url("../images/cover-image-light.png");
+    --article-title-color: #353430;
+    --section-title-color: #353430;
+    --border-color: #353430;
+    --link-shadow: #ff8dcb;
+    --rec-color: transparent;
+  }
+
+  :root.theme-auto .header__rec,
+  :root.theme-auto .header__rec::after {
+    display: none;
+  }
 }
