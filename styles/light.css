@@ -2,6 +2,7 @@
 :root.theme-light {
   --accent-color: #ff8dcb;
   --main-text-color: #353430;
+  --ghost-text-color: #32312D66;
   --title-color: #ffc2e6;
   --title-shadow: #FF8DCB;
   --button-color: #353430;
@@ -17,7 +18,8 @@
 
 :root.theme-light .header__rec,
 :root.theme-light .header__rec::after {
-  display: none;
+  opacity: 0;
+  visibility: hidden;
 }
 
 /* 2. Авто-светлая тема, если system light и активна auto-тема */
@@ -25,6 +27,7 @@
   :root.theme-auto {
     --accent-color: #ff8dcb;
     --main-text-color: #353430;
+    --ghost-text-color: #32312D66;
     --title-color: #ffc2e6;
     --title-shadow: #FF8DCB;
     --button-color: #353430;
@@ -40,6 +43,7 @@
 
   :root.theme-auto .header__rec,
   :root.theme-auto .header__rec::after {
-    display: none;
+    opacity: 0;
+    visibility: hidden;
   }
 }
