@@ -62,13 +62,17 @@ a:focus-visible {
 }
 
 .header {
-  position: relative;
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  grid-template-areas:
+    "top-line"
+    "title"
+    "text";
   height: 100vh;
   padding: 20px;
   margin-bottom: 60px;
 }
+
 
 .header__top-line {
   display: grid;
@@ -161,19 +165,20 @@ a:focus-visible {
 }
 
 .header__text {
+  grid-area: text;
+  align-self: start;
+  justify-self: end;
   font-family: 'IBM Plex mono', monospace;
   font-size: 18px;
   font-weight: 700;
   line-height: 23.4px;
   color: var(--article-title-color);
   background-color: var(--accent-color);
+  word-wrap: break-word;
+  text-align: left;
   max-width: 50%;
   margin-top: 114px;
   margin-bottom: 11.6%;
-  word-wrap: break-word;
-  text-align: left;
-  align-self: flex-end;
-  white-space: normal;
 }
 
 .content {
@@ -351,6 +356,14 @@ a:focus-visible {
 }
 
 @media (max-width: 1023px) {
+
+  .header {
+    grid-template-rows: auto auto 1fr auto;
+    grid-template-areas:
+      "top-line"
+      "title"
+      "text";
+  }
 
   .header__title {
     margin-top: 173px;
