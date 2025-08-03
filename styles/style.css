@@ -66,7 +66,6 @@ a:focus-visible {
   display: flex;
   flex-direction: column;
   height: 100vh;
-  min-height: 668px;
   padding: 20px;
   margin-bottom: 60px;
 }
@@ -170,7 +169,7 @@ a:focus-visible {
   background-color: var(--accent-color);
   max-width: 50%;
   margin-top: 114px;
-  margin-bottom: 114px;
+  margin-bottom: 11.6%;
   word-wrap: break-word;
   text-align: left;
   align-self: flex-end;
@@ -203,6 +202,10 @@ a:focus-visible {
   gap: 20px;
 }
 
+.content-section-row {
+  flex-direction: row;
+}
+
 .section__content {
   display: flex;
   flex-direction: column;
@@ -215,7 +218,6 @@ a:focus-visible {
   font-size: 18px;
   font-weight: 700;
   color: var(--section-title-color, #FF0070);
-  min-width: 315px;
   max-width: 315px;
   margin-bottom: 20px;
   margin-top: 0;
@@ -235,6 +237,10 @@ a:focus-visible {
   color: var(--article-title-color, #000028);
   margin-bottom: 10px;
   margin-top: 0;
+}
+
+.article__main-title {
+  margin-bottom: 0;
 }
 
 .article__sub-title {
@@ -290,7 +296,7 @@ a:focus-visible {
 .gallery__grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(30%, 1fr));
-  grid-template-rows: repeat(auto-fit, minmax(30%, 1fr));
+  grid-template-rows: repeat(auto-fit, minmax(20%, 1fr));
   gap: 2vw;
   margin-top: 20px;
   padding-left: 0px;
@@ -346,13 +352,8 @@ a:focus-visible {
 
 @media (max-width: 1023px) {
 
-  .header {
-    margin-bottom: 40px;
-  }
-
   .header__title {
     margin-top: 173px;
-    margin-left: 0;
   }
 
   .header__text {
@@ -380,19 +381,14 @@ a:focus-visible {
 
   .section__title {
     min-width: 236px;
-    margin-bottom: 0;
   }
 
-  .content-section {
-    margin-bottom: 40px;
+  .content-section-row {
+    flex-direction: column;
   }
 
   .section__row {
     flex-direction: column;
-  }
-
-  .gallery {
-    margin-bottom: 40px;
   }
 }
 
@@ -400,7 +396,7 @@ a:focus-visible {
 
   .header {
     padding: 10px;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
   }
 
   .header__top-line {
@@ -429,7 +425,7 @@ a:focus-visible {
 
   .header__theme-menu {
     order: 2;
-    margin-top: 65px;
+    margin-top: 39px;
   }
 
   .content {
@@ -438,6 +434,7 @@ a:focus-visible {
 
   .content-section {
     padding: 0;
+    margin-bottom: 50px;
   }
 
   .media-part {
@@ -455,7 +452,7 @@ a:focus-visible {
   .section__title {
     min-width: 100%;
     max-width: 100%;
-    margin-bottom: 10px;
+    margin-right: 0;
   }
 
   .section__content {
@@ -469,7 +466,7 @@ a:focus-visible {
   }
 
   .gallery {
-    margin: 0 10px 30px 10px;
+    margin: 0 10px 40px 10px;
   }
 
   .gallery__grid {
@@ -491,7 +488,7 @@ a:focus-visible {
   }
 
   .footer__title {
-    font-size: 116px;
+    font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
     text-shadow: 2px 2px 0 var(--accent-color);
   }
 
