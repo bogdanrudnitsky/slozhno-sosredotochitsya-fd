@@ -68,6 +68,7 @@ a:focus-visible {
     "top-line"
     "title"
     "text";
+  min-height: 668px;
   height: 100vh;
   padding: 20px;
   margin-bottom: 60px;
@@ -208,6 +209,7 @@ a:focus-visible {
 }
 
 .content-section-row {
+  flex-wrap: wrap;
   flex-direction: row;
 }
 
@@ -219,16 +221,22 @@ a:focus-visible {
 }
 
 .section__title {
+  display: block;
+  flex: 0 0 32%;
+  max-width: 315px;
   font-family: 'IBM Plex mono', monospace;
   font-size: 18px;
   font-weight: 700;
   color: var(--section-title-color, #FF0070);
-  max-width: 315px;
   margin-bottom: 20px;
   margin-top: 0;
   margin-right: 20px;
 }
 
+.article {
+  flex: 1;
+  flex: 0 1 calc((100% - 40px) / 3);
+}
 
 .article__title {
   font-family: 'IBM Plex mono', monospace;
@@ -366,7 +374,7 @@ a:focus-visible {
   }
 
   .header__title {
-    margin-top: 173px;
+    margin-top: 183px;
   }
 
   .header__text {
@@ -393,7 +401,7 @@ a:focus-visible {
   }
 
   .section__title {
-    min-width: 236px;
+    max-width: 236px;
   }
 
   .content-section-row {
@@ -421,8 +429,8 @@ a:focus-visible {
   }
 
   .header__title {
-    font-size: clamp(7rem, 0.5625rem + 14.4531vw, 9.8125rem);
-    margin-top: 65px;
+    font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+    margin-top: clamp(75px, 11.22vh, 150px);
     margin-left: 0;
     text-shadow: 2px 2px 0 var(--accent-color);
     line-height: 82%;
@@ -432,7 +440,7 @@ a:focus-visible {
 
   .header__text {
     max-width: 100%;
-    margin-top: 55px;
+    margin-top: clamp(55px, 8.23vh, 110px);
     margin-bottom: 0;
   }
 
