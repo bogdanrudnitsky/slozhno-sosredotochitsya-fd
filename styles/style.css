@@ -504,6 +504,11 @@ a:focus-visible {
     grid-row: auto;
   }
 
+  .gallery__image {
+    height: auto;
+    display: block;
+  }
+
   .footer {
     min-width: 100%;
   }
