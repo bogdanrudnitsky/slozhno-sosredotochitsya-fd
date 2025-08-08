@@ -162,7 +162,7 @@ a:focus-visible {
   color: var(--title-color);
   text-shadow: 4px 4px 0 var(--title-shadow);
   margin-left: -20px;
-  margin-top: 15px;
+  align-self: center;
 }
 
 .header__text {
@@ -178,8 +178,8 @@ a:focus-visible {
   word-wrap: break-word;
   text-align: left;
   max-width: 50%;
-  margin-top: 109px;
-  margin-bottom: 11.6%;
+  margin-bottom: 14.8vh;
+  align-self: end;
 }
 
 .content {
@@ -339,7 +339,13 @@ a:focus-visible {
 }
 
 .gallery__title {
-  font-size: 16px;
+  font-family: IBM Plex Mono;
+  font-weight: 700;
+  font-style: Bold;
+  font-size: 18px;
+  leading-trim: NONE;
+  line-height: 23.4px;
+  letter-spacing: 0%;
   background-color: var(--accent-color);
   color: var(--article-title-color);
 }
@@ -366,19 +372,15 @@ a:focus-visible {
 @media (max-width: 1023px) {
 
   .header {
-    grid-template-rows: auto auto 1fr auto;
+    grid-template-rows: auto 1fr auto;
     grid-template-areas:
       "top-line"
       "title"
       "text";
   }
 
-  .header__title {
-    margin-top: 183px;
-  }
-
   .header__text {
-    margin-top: 162px;
+    margin-bottom: 16.5vh;
   }
 
   .header__top-line {
@@ -389,8 +391,7 @@ a:focus-visible {
   }
 
   .header__theme-menu {
-    margin-top: 0;
-    margin-top: 146px;
+    margin-top: 14.8vh;
     justify-self: end;
   }
 
@@ -430,7 +431,6 @@ a:focus-visible {
 
   .header__title {
     font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
-    margin-top: clamp(75px, 11.22vh, 150px);
     margin-left: 0;
     text-shadow: 2px 2px 0 var(--accent-color);
     line-height: 82%;
@@ -440,13 +440,12 @@ a:focus-visible {
 
   .header__text {
     max-width: 100%;
-    margin-top: clamp(55px, 8.23vh, 110px);
-    margin-bottom: 0;
+    margin-bottom: 7vh;
   }
 
   .header__theme-menu {
     order: 2;
-    margin-top: 39px;
+    margin-top: 6vh;
   }
 
   .content {
